@@ -5,44 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Purushothama K - Embedded Software Engineer specializing in Embedded C, microcontrollers, Linux programming and communication protocols.">
-
     <meta name="author" content="Purushothama K">
+    <meta name="description" content="Purushothama K - Embedded Software Engineer. Explore Embedded C, PIC18 microcontrollers, Linux programming, CAN communication and firmware projects.">
 
     <title>Purushothama K | Embedded Software Engineer</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Main CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome technical icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- BACKGROUND EFFECT -->
     <div class="background-grid"></div>
-    <div class="glow glow-one"></div>
-    <div class="glow glow-two"></div>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <canvas id="circuit-canvas"></canvas>
 
     <!-- NAVIGATION -->
     <header class="header">
         <nav class="navbar container">
 
             <a href="#home" class="logo">
-                <span class="logo-bracket">&lt;</span>
-                PK
-                <span class="logo-bracket">/&gt;</span>
+                <span>&lt;</span>PK<span>/&gt;</span>
             </a>
 
             <button class="menu-toggle" id="menu-toggle"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                    aria-label="Toggle menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
             </button>
 
             <ul class="nav-links" id="nav-links">
@@ -54,58 +50,60 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
+            <a class="nav-hire" href="#contact">
+                <i class="fa-solid fa-paper-plane"></i> Let's Connect
+            </a>
+
         </nav>
     </header>
 
-
     <main>
 
-        <!-- HERO SECTION -->
+        <!-- HERO -->
         <section class="hero section" id="home">
 
             <div class="container hero-container">
 
                 <div class="hero-content">
 
-                    <p class="eyebrow">
-                        <span class="status-dot"></span>
-                        AVAILABLE FOR EMBEDDED SOFTWARE OPPORTUNITIES
-                    </p>
+                    <div class="availability">
+                        <span class="live-dot"></span>
+                        OPEN TO EMBEDDED SOFTWARE OPPORTUNITIES
+                    </div>
 
-                    <h1>
+                    <p class="hero-intro">HELLO, WORLD! I'M</p>
+
+                    <h1 class="hero-name">
                         PURUSHOTHAMA
-                        <span class="highlight">K</span>
+                        <span>K</span>
                     </h1>
 
-                    <h2>
-                        Embedded Software
-                        <span class="typing-text" id="typing-text">
-                            Engineer
-                        </span>
-                    </h2>
+                    <div class="profession">
+                        <span class="profession-prefix">I BUILD</span>
+                        <span id="typing-text">Embedded Systems</span>
+                        <span class="cursor">|</span>
+                    </div>
 
                     <p class="hero-description">
-                        Building a strong foundation in Embedded C,
-                        Microcontrollers, Linux System Programming
-                        and Communication Protocols.
-
-                        Passionate about understanding hardware,
-                        developing firmware and solving low-level
-                        engineering problems.
+                        Electrical & Electronics Engineering graduate
+                        with specialized Embedded Systems training.
+                        Passionate about building firmware, exploring
+                        microcontroller architecture and developing
+                        reliable software close to hardware.
                     </p>
 
                     <div class="hero-buttons">
 
                         <a href="#projects" class="btn btn-primary">
-                            Explore My Projects
-                            <span>→</span>
+                            <i class="fa-solid fa-code"></i>
+                            Explore Projects
                         </a>
 
                         <a href="assets/resume.pdf"
                            class="btn btn-outline"
-                           target="_blank"
-                           rel="noopener">
-                            View Resume ↗
+                           download="Purushothama_K_Resume.pdf">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            Download Resume
                         </a>
 
                     </div>
@@ -113,154 +111,202 @@
                     <div class="social-links">
 
                         <a href="https://github.com/kpurushothama446-droid"
-                           target="_blank"
-                           rel="noopener">
-                            GitHub ↗
+                           target="_blank" rel="noopener"
+                           aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
                         </a>
 
                         <a href="https://www.linkedin.com/in/purushothama-k-b8413227b/"
-                           target="_blank"
-                           rel="noopener">
-                            LinkedIn ↗
+                           target="_blank" rel="noopener"
+                           aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                            LinkedIn
                         </a>
 
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kpurushothama446@gmail.com"
-                           target="_blank"
-                           rel="noopener">
-                            Email ↗
+                        <a href="mailto:kpurushothama446@gmail.com"
+                           aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                            Email
                         </a>
 
                     </div>
 
                 </div>
 
-
-                <!-- PROFILE IMAGE -->
+                <!-- ANIMATED PROFILE -->
                 <div class="hero-visual">
+
+                    <div class="orbit orbit-outer"></div>
+                    <div class="orbit orbit-middle"></div>
+                    <div class="orbit orbit-inner"></div>
+
+                    <div class="orbit-dot dot-one"></div>
+                    <div class="orbit-dot dot-two"></div>
+                    <div class="orbit-dot dot-three"></div>
 
                     <div class="profile-frame">
 
-                        <div class="profile-orbit orbit-one"></div>
-                        <div class="profile-orbit orbit-two"></div>
+                        <div class="profile-top">
+                            <span></span><span></span><span></span>
+                            <small>PROFILE.exe</small>
+                        </div>
 
                         <img
                             src="assets/profile.jpg"
-                            alt="Purushothama K - Embedded Software Engineer"
+                            alt="Purushothama K"
                             class="profile-image"
-                            onerror="this.style.display='none'; document.getElementById('profile-fallback').style.display='flex';"
+                            onerror="this.style.display='none';document.getElementById('profile-fallback').style.display='flex';"
                         >
 
                         <div id="profile-fallback" class="profile-fallback">
-                            <span>&lt;PK/&gt;</span>
+                            <i class="fa-solid fa-microchip"></i>
+                            <strong>&lt;PK/&gt;</strong>
                             <small>EMBEDDED ENGINEER</small>
+                        </div>
+
+                        <div class="profile-caption">
+                            <span class="live-dot"></span>
+                            FIRMWARE ENTHUSIAST
                         </div>
 
                     </div>
 
-                    <div class="floating-card card-code">
-                        <span>C</span>
-                        <small>Embedded C</small>
+                    <div class="float-icon float-c">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Embedded C</span>
                     </div>
 
-                    <div class="floating-card card-mcu">
-                        <span>⚡</span>
-                        <small>Microcontrollers</small>
+                    <div class="float-icon float-chip">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>MCU</span>
                     </div>
 
-                    <div class="floating-card card-linux">
-                        <span>⌘</span>
-                        <small>Linux Systems</small>
+                    <div class="float-icon float-linux">
+                        <i class="fa-brands fa-linux"></i>
+                        <span>Linux</span>
+                    </div>
+
+                    <div class="float-icon float-can">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span>CAN BUS</span>
                     </div>
 
                 </div>
 
             </div>
 
-            <a href="#about" class="scroll-indicator">
-                SCROLL TO EXPLORE
-                <span>↓</span>
-            </a>
+            <div class="hero-bottom container">
+                <span><i class="fa-solid fa-location-dot"></i> Bengaluru, India</span>
+                <span>LOW-LEVEL CODE. REAL-WORLD SYSTEMS.</span>
+                <a href="#about">SCROLL TO EXPLORE <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
 
         </section>
 
 
-        <!-- ABOUT SECTION -->
-        <section class="section about-section" id="about">
+        <!-- TECH STRIP -->
+        <section class="tech-strip">
+            <div class="tech-track">
+                <span><i class="fa-solid fa-code"></i> EMBEDDED C</span>
+                <span><i class="fa-solid fa-microchip"></i> PIC18 MCU</span>
+                <span><i class="fa-solid fa-network-wired"></i> CAN PROTOCOL</span>
+                <span><i class="fa-brands fa-linux"></i> LINUX</span>
+                <span><i class="fa-solid fa-terminal"></i> SYSTEM PROGRAMMING</span>
+                <span><i class="fa-solid fa-wave-square"></i> UART / SPI / I2C</span>
+                <span><i class="fa-solid fa-code"></i> EMBEDDED C</span>
+                <span><i class="fa-solid fa-microchip"></i> PIC18 MCU</span>
+                <span><i class="fa-solid fa-network-wired"></i> CAN PROTOCOL</span>
+                <span><i class="fa-brands fa-linux"></i> LINUX</span>
+            </div>
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
 
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="section-number">01 / ABOUT</span>
-                    <h2>Engineering Mindset.</h2>
-                    <p>Understanding systems beyond the code.</p>
+                    <span class="section-label">01 / ABOUT ME</span>
+                    <h2>Beyond the <span>Code.</span></h2>
+                    <p>Understanding how software connects with hardware.</p>
                 </div>
 
                 <div class="about-grid">
 
-                    <div class="about-main">
+                    <div class="about-main glass-card">
+                        <span class="terminal-label">
+                            <i class="fa-solid fa-terminal"></i>
+                            developer_profile.c
+                        </span>
 
                         <h3>
-                            Hello, I'm
-                            <span class="highlight">Purushothama K</span>.
+                            Hi, I'm <span class="accent">Purushothama K</span>.
                         </h3>
 
                         <p>
                             I am an Electrical and Electronics Engineering
-                            graduate with specialized training in
-                            Embedded Systems.
+                            graduate with specialized training in Embedded
+                            Systems from Emertxe Information Technologies.
                         </p>
 
                         <p>
                             My technical foundation includes C programming,
-                            Embedded C, microcontroller fundamentals,
-                            Linux system programming, data structures
-                            and communication protocols.
+                            Embedded C, data structures, microcontrollers,
+                            Linux system programming and communication protocols.
                         </p>
 
                         <p>
-                            I enjoy exploring how firmware interacts
-                            with hardware, how peripherals communicate
-                            and how low-level software controls
-                            embedded applications.
+                            Through hands-on projects, I have explored
+                            CAN communication, UDP socket programming,
+                            process management, bit-level operations and
+                            file handling.
                         </p>
 
                         <p>
-                            My goal is to grow as an Embedded Software
-                            Engineer and contribute to reliable firmware
-                            development and real-world engineering systems.
+                            I aim to develop reliable firmware and deepen
+                            my understanding of how software interacts
+                            with hardware at the system level.
                         </p>
 
+                        <div class="code-signature">
+                            <span>while</span> (learning) {<br>
+                            &nbsp;&nbsp;build();<br>
+                            &nbsp;&nbsp;debug();<br>
+                            &nbsp;&nbsp;improve();<br>
+                            }
+                        </div>
                     </div>
 
+                    <div class="about-details">
 
-                    <div class="about-info">
-
-                        <div class="info-card">
-                            <span class="info-icon">🎓</span>
+                        <div class="detail-card">
+                            <i class="fa-solid fa-graduation-cap"></i>
                             <div>
                                 <h4>Education</h4>
                                 <p>B.E. Electrical & Electronics Engineering</p>
                             </div>
                         </div>
 
-                        <div class="info-card">
-                            <span class="info-icon">💻</span>
+                        <div class="detail-card">
+                            <i class="fa-solid fa-certificate"></i>
                             <div>
-                                <h4>Technical Training</h4>
+                                <h4>Professional Training</h4>
                                 <p>Emertxe Certified Embedded Professional</p>
                             </div>
                         </div>
 
-                        <div class="info-card">
-                            <span class="info-icon">📍</span>
+                        <div class="detail-card">
+                            <i class="fa-solid fa-location-dot"></i>
                             <div>
                                 <h4>Location</h4>
                                 <p>Bengaluru, India</p>
                             </div>
                         </div>
 
-                        <div class="info-card">
-                            <span class="info-icon">🎯</span>
+                        <div class="detail-card">
+                            <i class="fa-solid fa-bullseye"></i>
                             <div>
                                 <h4>Career Focus</h4>
                                 <p>Embedded Software & Firmware Development</p>
@@ -270,306 +316,247 @@
                     </div>
 
                 </div>
-
             </div>
-
         </section>
 
 
-        <!-- SKILLS SECTION -->
+        <!-- SKILLS -->
         <section class="section skills-section" id="skills">
 
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="section-number">02 / TECHNICAL SKILLS</span>
-                    <h2>My Engineering Toolkit.</h2>
-                    <p>Technologies and concepts I have studied and applied.</p>
+                    <span class="section-label">02 / TECHNICAL EXPERTISE</span>
+                    <h2>My Engineering <span>Toolkit.</span></h2>
+                    <p>Core technologies and concepts explored through training and projects.</p>
                 </div>
-
 
                 <div class="skills-grid">
 
                     <div class="skill-card">
-                        <span class="skill-icon">C</span>
+                        <i class="fa-solid fa-code skill-icon"></i>
                         <h3>Programming</h3>
-                        <ul>
-                            <li>C Programming</li>
-                            <li>Embedded C</li>
-                            <li>C++ Fundamentals</li>
-                            <li>Python Fundamentals</li>
-                        </ul>
+                        <p>C Programming · Embedded C · C++ Fundamentals · Python Fundamentals</p>
+                        <span>01</span>
                     </div>
 
                     <div class="skill-card">
-                        <span class="skill-icon">⚙</span>
-                        <h3>Embedded Systems</h3>
-                        <ul>
-                            <li>PIC18 Microcontrollers</li>
-                            <li>GPIO and Digital I/O</li>
-                            <li>ADC and PWM</li>
-                            <li>Timers and Interrupts</li>
-                            <li>LCD Interfacing</li>
-                        </ul>
+                        <i class="fa-solid fa-microchip skill-icon"></i>
+                        <h3>Microcontrollers</h3>
+                        <p>PIC18 · GPIO · ADC · PWM · Timers · Interrupts · LCD</p>
+                        <span>02</span>
                     </div>
 
                     <div class="skill-card">
-                        <span class="skill-icon">↔</span>
+                        <i class="fa-solid fa-network-wired skill-icon"></i>
                         <h3>Communication</h3>
-                        <ul>
-                            <li>CAN Protocol</li>
-                            <li>UART</li>
-                            <li>SPI</li>
-                            <li>I2C</li>
-                        </ul>
+                        <p>CAN · UART · SPI · I2C · UDP Socket Programming</p>
+                        <span>03</span>
                     </div>
 
                     <div class="skill-card">
-                        <span class="skill-icon">⌘</span>
-                        <h3>Linux Programming</h3>
-                        <ul>
-                            <li>Linux Fundamentals</li>
-                            <li>Process Management</li>
-                            <li>System Calls</li>
-                            <li>Socket Programming</li>
-                            <li>File Handling</li>
-                        </ul>
+                        <i class="fa-brands fa-linux skill-icon"></i>
+                        <h3>Linux Systems</h3>
+                        <p>Processes · fork · exec · File Handling · Sockets · IPC Fundamentals</p>
+                        <span>04</span>
                     </div>
 
                     <div class="skill-card">
-                        <span class="skill-icon">🛠</span>
+                        <i class="fa-solid fa-memory skill-icon"></i>
+                        <h3>Core Concepts</h3>
+                        <p>Pointers · Memory Management · Bit Manipulation · Data Structures</p>
+                        <span>05</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-solid fa-screwdriver-wrench skill-icon"></i>
                         <h3>Development Tools</h3>
-                        <ul>
-                            <li>MPLAB X IDE</li>
-                            <li>XC8 Compiler</li>
-                            <li>GCC Compiler</li>
-                            <li>Git and GitHub</li>
-                            <li>Linux / WSL</li>
-                        </ul>
+                        <p>MPLAB X · XC8 · GCC · Git · GitHub · Linux / WSL</p>
+                        <span>06</span>
                     </div>
 
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- PROJECTS SECTION -->
+        <!-- PROJECTS -->
         <section class="section projects-section" id="projects">
 
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="section-number">03 / ENGINEERING PROJECTS</span>
-                    <h2>Built Through Code.</h2>
-                    <p>
-                        Practical projects demonstrating programming,
-                        system-level understanding and engineering logic.
-                    </p>
+                    <span class="section-label">03 / SELECTED ENGINEERING WORK</span>
+                    <h2>From Concept to <span>Implementation.</span></h2>
+                    <p>Practical projects demonstrating programming and system-level engineering concepts.</p>
                 </div>
-
 
                 <div class="projects-grid">
 
-                    <!-- PROJECT 1 -->
                     <article class="project-card">
 
                         <div class="project-visual can-visual">
-                            <span class="visual-label">EMBEDDED SYSTEMS</span>
-                            <div class="visual-chip">PIC18</div>
-                            <div class="visual-data">CAN BUS</div>
-                            <div class="visual-node">ECU → DASHBOARD</div>
+                            <span class="project-number">PROJECT_01</span>
+                            <i class="fa-solid fa-car-side project-big-icon"></i>
+                            <div class="signal-line"></div>
+                            <div class="ecu-nodes">
+                                <span>ECU 1</span>
+                                <span>CAN BUS</span>
+                                <span>ECU 3</span>
+                            </div>
+                            <span class="project-status">EMBEDDED SYSTEMS</span>
                         </div>
 
-                        <div class="project-content">
-                            <span class="project-category">01 / AUTOMOTIVE</span>
-
+                        <div class="project-info">
+                            <span class="project-category">AUTOMOTIVE EMBEDDED</span>
                             <h3>CAN-Based Automotive Dashboard</h3>
-
                             <p>
-                                PIC18-based dashboard simulation exploring
-                                CAN communication, ADC input processing,
-                                LCD interfacing and timer-controlled indicators.
+                                PIC18-based dashboard project exploring
+                                CAN messaging, ADC inputs, LCD interfacing,
+                                indicators and buzzer control.
                             </p>
-
-                            <div class="tech-tags">
-                                <span>Embedded C</span>
-                                <span>PIC18</span>
-                                <span>CAN</span>
-                                <span>LCD</span>
+                            <div class="tags">
+                                <span>Embedded C</span><span>PIC18</span>
+                                <span>CAN</span><span>LCD</span>
                             </div>
-
                             <a href="https://github.com/kpurushothama446-droid/CAN-Based-Automotive_Dashboard"
-                               class="project-link"
-                               target="_blank"
-                               rel="noopener">
-                                View Source Code ↗
+                               target="_blank" rel="noopener" class="project-link">
+                                Explore Repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
 
                     </article>
 
 
-                    <!-- PROJECT 2 -->
                     <article class="project-card">
 
                         <div class="project-visual tftp-visual">
-                            <span class="visual-label">NETWORK PROGRAMMING</span>
-                            <div class="terminal-window">
-                                <p>$ ./tftp_client</p>
-                                <p class="terminal-green">REQUEST → SERVER</p>
-                                <p>DATA → ACK</p>
-                                <p class="terminal-green">TRANSFER COMPLETE</p>
+                            <span class="project-number">PROJECT_02</span>
+                            <i class="fa-solid fa-server project-big-icon"></i>
+                            <div class="packet-flow">
+                                <span>REQUEST</span><i class="fa-solid fa-arrow-right"></i>
+                                <span>DATA</span><i class="fa-solid fa-arrow-right"></i>
+                                <span>ACK</span>
                             </div>
+                            <span class="project-status">NETWORK PROGRAMMING</span>
                         </div>
 
-                        <div class="project-content">
-                            <span class="project-category">02 / NETWORKING</span>
-
+                        <div class="project-info">
+                            <span class="project-category">LINUX / SOCKETS</span>
                             <h3>TFTP Client-Server Implementation</h3>
-
                             <p>
-                                C-based file transfer implementation
-                                using UDP sockets, request handling,
-                                data packets and acknowledgments.
+                                C-based file transfer implementation using
+                                UDP sockets, request handling, data packets,
+                                acknowledgments and transfer modes.
                             </p>
-
-                            <div class="tech-tags">
-                                <span>C</span>
-                                <span>Linux</span>
-                                <span>UDP</span>
-                                <span>Socket</span>
+                            <div class="tags">
+                                <span>C</span><span>UDP</span>
+                                <span>Linux</span><span>Sockets</span>
                             </div>
-
                             <a href="https://github.com/kpurushothama446-droid/TFTP-Client-Server"
-                               class="project-link">
-                                View Source Code ↗
+                               target="_blank" rel="noopener" class="project-link">
+                                Explore Repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
 
                     </article>
 
 
-                    <!-- PROJECT 3 -->
                     <article class="project-card">
 
                         <div class="project-visual shell-visual">
-                            <span class="visual-label">LINUX SYSTEM PROGRAMMING</span>
-                            <div class="terminal-window">
+                            <span class="project-number">PROJECT_03</span>
+                            <i class="fa-solid fa-terminal project-big-icon"></i>
+                            <div class="mini-terminal">
                                 <p>$ ./minishell</p>
-                                <p class="terminal-green">minishell$ ls</p>
-                                <p>file1.c &nbsp; file2.c</p>
-                                <p class="terminal-green">minishell$ _</p>
+                                <p>minishell$ ls</p>
+                                <p class="terminal-success">process created...</p>
+                                <p>minishell$ <span class="blink">_</span></p>
                             </div>
+                            <span class="project-status">LINUX SYSTEMS</span>
                         </div>
 
-                        <div class="project-content">
-                            <span class="project-category">03 / LINUX INTERNALS</span>
-
+                        <div class="project-info">
+                            <span class="project-category">PROCESS MANAGEMENT</span>
                             <h3>Mini Shell Implementation</h3>
-
                             <p>
-                                Command-line shell exploring process
-                                creation, external program execution
-                                and parent-child synchronization.
+                                Command-line shell exploring command execution,
+                                process creation, parent-child synchronization
+                                and Linux system programming.
                             </p>
-
-                            <div class="tech-tags">
-                                <span>C</span>
-                                <span>Linux</span>
-                                <span>fork()</span>
-                                <span>exec()</span>
+                            <div class="tags">
+                                <span>C</span><span>Linux</span>
+                                <span>fork()</span><span>exec()</span>
                             </div>
-
-                            <a href="https://github.com/kpurushothama446-droid/Mini-Shell-Implementation"
-                               class="project-link"
-                               target="_blank"
-                               rel="noopener">
-                                View Source Code ↗
+                            <a href="https://github.com/kpurushothama446-droid"
+                               target="_blank" rel="noopener" class="project-link">
+                                Explore GitHub Projects <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
 
                     </article>
 
 
-                    <!-- PROJECT 4 -->
                     <article class="project-card">
 
                         <div class="project-visual stego-visual">
-                            <span class="visual-label">BIT-LEVEL PROGRAMMING</span>
-                            <div class="pixel-grid">
-                                <span>1</span><span>0</span><span>1</span>
-                                <span>0</span><span>1</span><span>1</span>
-                                <span>1</span><span>0</span><span>1</span>
-                            </div>
-                            <div class="visual-data">LSB ENCODING</div>
+                            <span class="project-number">PROJECT_04</span>
+                            <i class="fa-solid fa-image project-big-icon"></i>
+                            <div class="binary-stream">10110101 01001110 10101010</div>
+                            <span class="project-status">BIT-LEVEL PROGRAMMING</span>
                         </div>
 
-                        <div class="project-content">
-                            <span class="project-category">04 / IMAGE PROCESSING</span>
-
+                        <div class="project-info">
+                            <span class="project-category">IMAGE PROCESSING</span>
                             <h3>Image Steganography in C</h3>
-
                             <p>
-                                BMP image-based data hiding using
-                                Least Significant Bit manipulation,
-                                binary processing and message extraction.
+                                BMP image data hiding using Least Significant
+                                Bit manipulation, binary processing and
+                                message encoding and decoding.
                             </p>
-
-                            <div class="tech-tags">
-                                <span>C</span>
-                                <span>LSB</span>
-                                <span>BMP</span>
-                                <span>Bitwise</span>
+                            <div class="tags">
+                                <span>C</span><span>BMP</span>
+                                <span>LSB</span><span>Bitwise</span>
                             </div>
-
-                            <a href="https://github.com/kpurushothama446-droid/Image-Steganography-in-C"
-                               class="project-link"
-                               target="_blank"
-                               rel="noopener">
-                                View Source Code ↗
+                            <a href="https://github.com/kpurushothama446-droid"
+                               target="_blank" rel="noopener" class="project-link">
+                                Explore GitHub Projects <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
 
                     </article>
 
 
-                    <!-- PROJECT 5 -->
                     <article class="project-card">
 
                         <div class="project-visual address-visual">
-                            <span class="visual-label">C PROGRAMMING</span>
-                            <div class="address-window">
-                                <p>CONTACT MANAGEMENT</p>
-                                <p>01. ADD CONTACT</p>
-                                <p>02. SEARCH CONTACT</p>
-                                <p>03. MODIFY CONTACT</p>
-                                <p>04. DELETE CONTACT</p>
+                            <span class="project-number">PROJECT_05</span>
+                            <i class="fa-solid fa-address-book project-big-icon"></i>
+                            <div class="address-animation">
+                                <span><i class="fa-solid fa-user"></i> ADD CONTACT</span>
+                                <span><i class="fa-solid fa-magnifying-glass"></i> SEARCH</span>
+                                <span><i class="fa-solid fa-pen"></i> MODIFY</span>
+                                <span><i class="fa-solid fa-trash"></i> DELETE</span>
                             </div>
+                            <span class="project-status">C PROGRAMMING</span>
                         </div>
 
-                        <div class="project-content">
-                            <span class="project-category">05 / DATA MANAGEMENT</span>
-
+                        <div class="project-info">
+                            <span class="project-category">DATA MANAGEMENT</span>
                             <h3>Address Book Management System</h3>
-
                             <p>
-                                C-based contact management application
-                                using structures, modular functions
-                                and CSV file storage.
+                                Modular C application for adding, searching,
+                                modifying and deleting contacts using
+                                structures and CSV file storage.
                             </p>
-
-                            <div class="tech-tags">
-                                <span>C</span>
-                                <span>Structures</span>
-                                <span>File I/O</span>
-                                <span>CSV</span>
+                            <div class="tags">
+                                <span>C</span><span>Structures</span>
+                                <span>File I/O</span><span>CSV</span>
                             </div>
-
                             <a href="https://github.com/kpurushothama446-droid/C-Address-Book"
-                               class="project-link">
-                                View Source Code ↗
+                               target="_blank" rel="noopener" class="project-link">
+                                Explore Repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
 
@@ -578,116 +565,92 @@
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- JOURNEY SECTION -->
-        <section class="section journey-section" id="journey">
+        <!-- JOURNEY -->
+        <section class="section" id="journey">
 
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="section-number">04 / MY JOURNEY</span>
-                    <h2>Learning. Building. Growing.</h2>
-                    <p>My academic background and technical development.</p>
+                    <span class="section-label">04 / MY JOURNEY</span>
+                    <h2>Learning. Building. <span>Growing.</span></h2>
                 </div>
 
                 <div class="timeline">
 
                     <div class="timeline-item">
                         <span class="timeline-dot"></span>
-                        <span class="timeline-date">EDUCATION</span>
+                        <span class="section-label">EDUCATION</span>
                         <h3>B.E. Electrical & Electronics Engineering</h3>
                         <p>Jain Institute of Technology, Davanagere</p>
                     </div>
 
                     <div class="timeline-item">
                         <span class="timeline-dot"></span>
-                        <span class="timeline-date">TECHNICAL TRAINING</span>
+                        <span class="section-label">PROFESSIONAL TRAINING</span>
                         <h3>Emertxe Information Technologies</h3>
                         <p>
-                            Emertxe Certified Embedded Professional.
-                            Training in C, Embedded Systems, Linux,
-                            Data Structures and Microcontrollers.
+                            Embedded C, C programming, Linux,
+                            microcontrollers, data structures and
+                            embedded system fundamentals.
                         </p>
                     </div>
 
                     <div class="timeline-item">
                         <span class="timeline-dot"></span>
-                        <span class="timeline-date">PROJECT DEVELOPMENT</span>
-                        <h3>Hands-on Engineering Projects</h3>
+                        <span class="section-label">PROJECT DEVELOPMENT</span>
+                        <h3>Hands-on Embedded & Systems Projects</h3>
                         <p>
-                            Developed programming projects involving
-                            embedded systems, Linux programming,
-                            networking and data processing.
-                        </p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <span class="timeline-date">CAREER GOAL</span>
-                        <h3>Embedded Software Engineering</h3>
-                        <p>
-                            Continuously strengthening firmware
-                            development and low-level programming skills.
+                            Automotive dashboard, TFTP client-server,
+                            Mini Shell, Image Steganography and Address Book.
                         </p>
                     </div>
 
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- CONTACT SECTION -->
+        <!-- CONTACT -->
         <section class="section contact-section" id="contact">
 
             <div class="container">
 
-                <div class="section-heading">
-                    <span class="section-number">05 / CONTACT</span>
-                    <h2>Let's Build Something Meaningful.</h2>
-                    <p>
-                        Open to Embedded Software Engineer and
-                        Embedded C opportunities.
-                    </p>
-                </div>
+                <div class="contact-box">
 
-                <div class="contact-card">
+                    <span class="section-label">05 / LET'S CONNECT</span>
 
-                    <h3>Interested in working together?</h3>
+                    <h2>Have an Engineering <span>Opportunity?</span></h2>
 
                     <p>
-                        I would welcome the opportunity to discuss
-                        embedded systems, firmware development and
-                        engineering opportunities.
+                        I'm interested in Embedded Software Engineer
+                        opportunities where I can contribute, learn
+                        and grow through real-world engineering challenges.
                     </p>
 
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kpurushothama446@gmail.com"
-                       target="_blank"
-                       rel="noopener"
-                       class="btn btn-primary">
-                        Contact Me via Gmail ↗
+                    <a class="btn btn-primary"
+                       href="mailto:kpurushothama446@gmail.com?subject=Embedded%20Software%20Engineer%20Opportunity">
+                        <i class="fa-solid fa-envelope"></i>
+                        Let's Discuss an Opportunity
                     </a>
 
-                    <div class="contact-links">
+                    <div class="contact-socials">
 
                         <a href="https://github.com/kpurushothama446-droid"
-                           target="_blank"
-                           rel="noopener">
-                            GitHub ↗
+                           target="_blank" rel="noopener">
+                            <i class="fa-brands fa-github"></i> GitHub
                         </a>
 
                         <a href="https://www.linkedin.com/in/purushothama-k-b8413227b/"
-                           target="_blank"
-                           rel="noopener">
-                            LinkedIn ↗
+                           target="_blank" rel="noopener">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
                         </a>
 
                         <a href="mailto:kpurushothama446@gmail.com">
-                            Email ↗
+                            <i class="fa-solid fa-envelope"></i> Email
                         </a>
 
                     </div>
@@ -695,36 +658,20 @@
                 </div>
 
             </div>
-
         </section>
 
     </main>
 
 
-    <!-- FOOTER -->
     <footer class="footer">
-
         <div class="container">
-
-            <p>
-                &copy; <span id="year"></span>
-                PURUSHOTHAMA K
-            </p>
-
-            <p>
-                Designed with passion for Embedded Engineering.
-            </p>
-
-            <a href="#home">Back to top ↑</a>
-
+            <p>© <span id="year"></span> PURUSHOTHAMA K</p>
+            <p>Designed with <span class="accent">♥</span> for Embedded Engineering.</p>
+            <a href="#home"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
         </div>
-
     </footer>
 
-
-    <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
 
 </body>
 </html>
-
