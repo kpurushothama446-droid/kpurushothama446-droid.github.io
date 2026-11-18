@@ -890,3 +890,41 @@ a {
     }
 }
 
+/* SCROLL REVEAL EFFECT */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ACTIVE NAVIGATION */
+
+.nav-links a.active {
+    color: var(--accent);
+}
+
+/* STAGGER PROJECT CARDS */
+
+.project-card:nth-child(2) {
+    transition-delay: .08s;
+}
+
+.project-card:nth-child(3) {
+    transition-delay: .16s;
+}
+
+.project-card:nth-child(4) {
+    transition-delay: .24s;
+}
+
+.project-card:nth-child(5) {
+    transition-delay: .32s;
+}
+
+
